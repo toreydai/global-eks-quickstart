@@ -53,7 +53,7 @@
 
 ## 使用方式
 
-1. 在此目录下打开 Claude Code 或 Kiro，`CLAUDE.md` / `kiro-system-prompt.md` 自动加载全球区配置
+1. 在此目录下打开 Claude Code，`CLAUDE.md` 自动加载全球区配置
 2. 将对应 [`docs/`](docs/) 目录中的 Demo 文件内容粘贴到对话框，由 AI 自主执行
 3. 每个 Demo 末尾均有**清理**步骤，实验结束后执行以避免持续计费
 
@@ -84,3 +84,11 @@
 操作机建议使用 Amazon Linux 2023 EC2，绑定具备 EKS/EC2/IAM 操作权限的 IAM Role。
 
 所需 IAM 权限参考 [eksctl minimum IAM policies](https://eksctl.io/usage/minimum-iam-policies/)。
+
+## License
+
+MIT - see the [LICENSE](LICENSE) file for details.
+
+## 免责声明
+
+本 Workshop 仅供学习和测试用途。执行过程中会创建 AWS 资源并产生费用，请在实验完成后及时清理资源。作者不对因使用本 Workshop 产生的任何费用或损失承担责任。所有命令和配置仅作为示例参考，生产环境使用前请根据实际需求进行安全评估和调整。
