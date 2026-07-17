@@ -4,23 +4,20 @@
 
 Kubernetes 原生不提供持久化存储能力，需要通过 Container Storage Interface（CSI）驱动将云存储服务集成到集群中。本实验在 EKS 集群上安装三种 AWS CSI 驱动（EBS、EFS、S3 Mountpoint），分别演示块存储、共享文件存储和对象存储的挂载方式，帮助理解不同存储类型的适用场景。
 
-### 实验目标
-
+**实验目标：**
 - 安装 EBS CSI Driver 并通过 StorageClass 动态创建 gp3 卷
 - 安装 EFS CSI Driver 并实现多 Pod 共享读写同一文件系统
 - 安装 S3 Mountpoint CSI Driver 并将 S3 桶挂载为 Pod 文件系统
 - 理解 Pod Identity 与节点实例角色两种 CSI 权限模型的区别
 
-### 实验流程
-
+**实验流程：**
 1. 创建 EBS CSI IAM Role 并安装 addon，部署 Pod 验证块存储写入
 2. 创建 EFS CSI IAM Role 并安装 addon，创建 EFS 文件系统和挂载目标
 3. 部署两个 Pod 验证 EFS 共享读写
 4. 创建 S3 桶并安装 S3 CSI addon，部署 Pod 验证对象存储挂载
 
-### 预计 AI 执行时长
+**预计 AI 执行时长：** 8-10 分钟
 
-8-10 分钟
 
 ## 前提条件
 

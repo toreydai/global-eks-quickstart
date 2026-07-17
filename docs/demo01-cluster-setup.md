@@ -4,15 +4,13 @@
 
 本实验将从零开始搭建一个完整的 EKS 集群环境，包括安装必要的 CLI 工具、创建托管节点组集群、验证集群连通性，并安装 Pod Identity Agent 插件为后续实验做准备。EKS 是 AWS 托管的 Kubernetes 服务，免去了控制平面运维负担，让团队专注于应用部署。
 
-### 实验目标
-
+**实验目标：**
 - 安装并验证 eksctl、kubectl v1.35、Helm 等核心工具
 - 使用 eksctl 创建包含托管节点组的 EKS 1.35 集群
 - 通过部署 nginx + NLB 验证集群网络连通性
 - 安装 eks-pod-identity-agent 插件，为后续 IAM 集成做准备
 
-### 实验流程
-
+**实验流程：**
 1. 安装 eksctl、kubectl、Helm 等 CLI 工具
 2. 创建 EKS 集群（2 节点 t3.medium）
 3. 验证节点就绪状态
@@ -21,11 +19,8 @@
 6. 扩展节点到 3 个
 7. 安装 eks-pod-identity-agent 插件并验证 DaemonSet
 
-### 预计 AI 执行时长
+**预计 AI 执行时长：** 25-30 分钟（含集群创建等待 15 分钟）
 
-AI 执行约 25-30 分钟（含集群创建等待 15 分钟）
-
----
 
 ## 前提条件
 

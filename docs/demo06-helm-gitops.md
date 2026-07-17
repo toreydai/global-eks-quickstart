@@ -4,23 +4,20 @@
 
 Helm 是 Kubernetes 的包管理器，通过 Chart 模板化应用部署并支持版本化发布与回滚。Argo CD 是声明式 GitOps 持续交付工具，以 Git 仓库为唯一事实来源，自动将集群状态与期望状态同步。本实验将两者结合，演示从手动 Helm 发布到 GitOps 自动化的完整流程。
 
-### 实验目标
-
+**实验目标：**
 - 掌握 Helm Chart 的创建、安装、升级和回滚操作
 - 部署 Argo CD 并配置 Application 实现自动同步
 - 验证 GitOps 自愈（Self-healing）和漂移检测能力
 - 理解声明式发布管理相比命令式操作的优势
 
-### 实验流程
-
+**实验流程：**
 1. 创建本地 Helm Chart 并完成 install → upgrade → rollback 生命周期
 2. 安装 Argo CD 并登录管理界面
 3. 创建 GitOps Application 并验证自动同步
 4. 模拟自愈、漂移检测和手动同步恢复场景
 
-### 预计 AI 执行时长
+**预计 AI 执行时长：** 5 分钟
 
-5 分钟
 
 ## 前提条件
 

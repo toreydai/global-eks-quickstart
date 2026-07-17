@@ -4,23 +4,20 @@
 
 EKS 支持多种计算模式：EC2 托管节点组提供完全控制的实例管理，Spot 实例可降低 70-90% 成本用于容错工作负载，而 Fargate 则实现完全无服务器的 Pod 运行环境。本实验通过实际操作对比这些计算选项的配置方式和调度行为。
 
-### 实验目标
-
+**实验目标：**
 - 创建 Spot 托管节点组并通过 taint/toleration 实现工作负载定向调度
 - 理解 Fargate Profile 的 namespace 选择器匹配机制
 - 对比 EC2 节点与 Fargate 节点的 Pod 调度差异
 - 掌握 Fargate Pod Execution Role 的信任策略配置
 
-### 实验流程
-
+**实验流程：**
 1. 创建 Spot 托管节点组并部署容忍 Spot taint 的工作负载
 2. 验证 Pod 调度到 Spot 节点后清理节点组
 3. 创建 Fargate Pod Execution Role 和 Fargate Profile
 4. 在匹配 namespace 中部署 Pod 并验证运行在 Fargate 节点
 
-### 预计 AI 执行时长
+**预计 AI 执行时长：** 6-8 分钟
 
-6-8 分钟
 
 ## 前提条件
 
